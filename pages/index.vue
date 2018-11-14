@@ -1,6 +1,11 @@
 <template>
   <div class="container">
-    Page
+    <p v-if="loggedIn">
+      Hello {{ user.name }}
+    </p>
+    <p v-if="!loggedIn">
+      Please sign in
+    </p>
   </div>
 </template>
 
@@ -9,8 +14,3 @@ export default {
 
 }
 </script>
-
-<style>
-
-</style>
-
